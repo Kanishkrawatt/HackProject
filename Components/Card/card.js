@@ -23,16 +23,50 @@ function card() {
       SubHeading: "Mumbai",
       Image:
         "https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
-      Features: ["2 Guests", "1 Bedroom", "1 Bed", "1 Bath"],
+      Features: ["2 Guests", "1 Bedroom"],
       Amenities: ["Wifi", "Breakfast", "Air Conditioning", "Kitchen"],
       Price: "₹ 1,500 / night",
       Fair: "Cancellation fexibility available",
+      Content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam n"
+    },
+    {
+      Heading: "Deluxe Room",
+      SubHeading: "Mumbai",
+      Image:
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
+      Features: ["2 Guests", "1 Bedroom"],
+      Amenities: ["Wifi", "Breakfast", "Air Conditioning", "Kitchen"],
+      Price: "₹ 1,500 / night",
+      Fair: "Cancellation fexibility available",
+      Content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam n"
+    },
+    {
+      Heading: "Deluxe Room",
+      SubHeading: "Mumbai",
+      Image:
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
+      Features: ["2 Guests", "1 Bedroom"],
+      Amenities: ["Wifi", "Breakfast", "Air Conditioning", "Kitchen"],
+      Price: "₹ 1,500 / night",
+      Fair: "Cancellation fexibility available",
+      Content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam n"
+    },
+    {
+      Heading: "Deluxe Room",
+      SubHeading: "Mumbai",
+      Image:
+        "https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80",
+      Features: ["2 Guests", "1 Bedroom"],
+      Amenities: ["Wifi", "Breakfast", "Air Conditioning", "Kitchen"],
+      Price: "₹ 1,500 / night",
+      Fair: "Cancellation fexibility available",
+      Content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget aliquam nunc nisl euismod nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam n"
     },
   ];
   return (
     <Page>
       {data.map((item, index) => (
-        <CardDiv key={index}>
+        <CardDiv key={index} image={item.Image}>
           <CardImg className="img" src={item.Image} />
           <CardAbout>
             <Heading className="heading">{item.Heading}</Heading>
@@ -58,11 +92,13 @@ function card() {
                 Price
                 <Fair>{item.Price}</Fair>
               </Price>
+              <Amenities style={{flexDirection:"row"}}>
               <Button
                 bgcolor="#f9a826"
                 style={{
                   padding: "0.75rem 1.75rem",
-                  width: "20%",
+                  maxWidth: "20%",
+                  width: "auto",
                   border: "none",
                   color: "white",
                 }}
@@ -80,7 +116,7 @@ function card() {
                 <Button
                   style={{
                     padding: "0.75rem 1.75rem",
-                    width: "20%",
+                    width: "auto",
                     border: "1px solid #f9a826",
                     color: "#f9a826",
                   }}
@@ -88,6 +124,7 @@ function card() {
                   ShowMore
                 </Button>
               </Link>
+              </Amenities>
             </Price>
           </CardAbout>
         </CardDiv>

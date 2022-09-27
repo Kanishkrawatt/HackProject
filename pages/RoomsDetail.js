@@ -5,6 +5,7 @@ import {
   Fair,
   Heading,
   Price,
+  SubHeading,
 } from "../Components/Card/cardComponents";
 export const DetailsPage = styled.div`
   display: flex;
@@ -22,6 +23,7 @@ function RoomsDetail(props) {
     <DetailsPage>
       <Heading style={{margin:"2rem"}}>{data.Heading}</Heading>
       <CardImg style={{margin:"2rem"}} src={data.Image} />
+      <SubHeading>{data.Content}</SubHeading>
       <Price style={{margin:"2rem"}}>
         <Fair style={{fontSize:"2rem"}}>{data.Price}</Fair>
       </Price>

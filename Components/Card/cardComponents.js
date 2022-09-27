@@ -1,9 +1,11 @@
 import styled from "styled-components";
 export const CardDiv = styled.div`
   display: flex;
-  height: 35vh;
+  min-height: 35vh;
+  height: auto;
   border-radius: 2rem;
-  width: 60vw;
+  min-width: 60vw;
+  width: auto;
   margin: 2rem;
   transition: color 0.5s ease-in-out;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
@@ -22,12 +24,21 @@ export const CardImg = styled.img`
   object-fit: cover;
   transition: transform 0.5s;
   border-radius: 2rem;
+  @media (max-width:1086px){
+    display: none;
+}
+    
 `;
 export const CardAbout = styled.div`
   display: flex;
   flex-direction: column;
   width: 60%;
   height: 100%;
+  @media (max-width:1086px){
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
 `;
 export const FlexCenter = styled.div`
   display: flex;
@@ -54,13 +65,18 @@ export const Amenities = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0rem 2rem;
+  
+    
 `;
 export const Price = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0rem 2rem;
+  padding: 0 1.5rem;
   justify-content: space-between;
+  @media (max-width: 1188px) {
+    flex-direction: column;
+}
 `;
 export const Fair = styled.div``;
 export const Button = styled.button`
@@ -74,6 +90,9 @@ export const Button = styled.button`
   font-weight: 300;
   cursor: pointer;
   background-color: ${(props) => props.bgcolor || "white"};
+  @media (max-width:1086px){
+    font-size: smaller;
+  }
 `;
 export const Page = styled.div`
   display: flex;
@@ -81,14 +100,23 @@ export const Page = styled.div`
   height: auto;
   min-height: 100vh;
   width: 100vw;
-  margin-left: 6rem;
-
+  margin:0rem 6rem;
   /* background-color: blue; */
   padding-top: 5rem;
+  @media (max-width:886px){
+    margin: 2rem;
+  }
+
 `;
 export const Features = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 0rem 2rem;
+  @media (max-width:1086px){
+
+  }
+  @media (max-width:500px){
+    font-size: smaller;
+  }
 `;
