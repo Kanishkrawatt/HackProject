@@ -3,13 +3,12 @@ export const CardDiv = styled.div`
   display: flex;
   min-height: 35vh;
   height: auto;
-  border-radius: 2rem;
   min-width: 60vw;
-  width: auto;
   margin: 2rem;
+  width: 80%;
   transition: color 0.5s ease-in-out;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   padding: 2rem;
+  border-bottom:2px solid #f9a826;
   flex-direction: row;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -74,6 +73,8 @@ export const Price = styled.div`
   align-items: center;
   padding: 0 1.5rem;
   justify-content: space-between;
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: bold;
   @media (max-width: 1188px) {
     flex-direction: column;
 }
@@ -99,9 +100,7 @@ export const Page = styled.div`
   flex-direction: column;
   height: auto;
   min-height: 100vh;
-  width: 100vw;
-  margin:0rem 6rem;
-  /* background-color: blue; */
+  align-items: center;
   padding-top: 5rem;
   @media (max-width:886px){
     margin: 2rem;

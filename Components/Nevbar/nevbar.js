@@ -8,8 +8,8 @@ function Nevbar() {
   let NevbarContent = [
     { Name: "Home", Link: "/" },
     { Name: "About", Link: "/about" },
-    { Name: "Contact", Link: "/contact" },
-    { Name: "Blog", Link: "/blog" },
+    { Name: "Create", Link: "/create" },
+    { Name: "Rooms", Link: "/RoomsPage" },
   ];
   const [Ham, setHam] = useState(false);
   const toggleHeight = {

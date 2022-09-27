@@ -4,20 +4,29 @@ const Page = styled.div`
     display: flex; 
     height: auto;
     min-height: 100vh;
-    width: 100vw;
-    /* background-color: blue; */
-    padding-top: 5rem;
+    width: auto;
+    padding:5rem 0rem;
+    flex-direction: column;
 `
 
 import Card from '../Components/Card/card'
-
-
-function RoomsPage() {
+import db from '../db'
+function RoomsPage(props) {
+  let data =JSON.stringify(props.Alldata);
   return (
     <Page>
-      <Card/>
+      <Card data ={data}/>
     </Page>
   )
+}
+
+export async function getStaticProps() {
+  let data = await db.collection("RoomsData").get()
+  let Alldata = data.docs.map(entry=>entry.data())
+  return{
+    props: { Alldata }, // will be passed to the page component as props
+    revalidate: 1,
+  };
 }
 
 export default RoomsPage

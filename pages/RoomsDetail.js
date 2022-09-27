@@ -11,27 +11,30 @@ export const DetailsPage = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 5rem;
-  width: 100%;
+  width: 60%;
+  margin:0 auto;
   min-height: 100vh;
   height: auto;
-  align-items: center;
+
 `;
 
 function RoomsDetail(props) {
   const data = JSON.parse(props.data);
   return (
     <DetailsPage>
-      <Heading style={{margin:"2rem"}}>{data.Heading}</Heading>
-      <CardImg style={{margin:"2rem"}} src={data.Image} />
-      <SubHeading>{data.Content}</SubHeading>
-      <Price style={{margin:"2rem"}}>
-        <Fair style={{fontSize:"2rem"}}>{data.Price}</Fair>
+      <Heading style={{margin:"2rem 0rem",marginBottom:"0rem",justifyContent:"center",display:"flex"}}>{data.Heading}</Heading>
+      <SubHeading style={{justifyContent:"center",marginBottom:"2rem",display:"flex"}}>{data.SubHeading}</SubHeading>
+      <CardImg style={{width:"60%"}} src={data.Image} />
+      <SubHeading style={{marginLeft:"0rem",marginTop:"4rem",fontSize:"1.2rem"}}>Starts from</SubHeading>
+      <Price style={{margin:"1rem 0rem"}}>
+        <Fair style={{fontSize:"1.5rem"}}>{data.Price}</Fair>
       </Price>
+      <SubHeading>{data.Content}</SubHeading>
     </DetailsPage>
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   return {
     props: {
       data: context.query.data, //pass it to the page props
