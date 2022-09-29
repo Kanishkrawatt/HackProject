@@ -1,6 +1,5 @@
 import Link from "next/link";
-import React from "react";
-import styled from "styled-components";
+import React, { useEffect, useState } from "react";
 
 import {
   CardDiv,
@@ -16,69 +15,88 @@ import {
   Features,
 } from "./cardComponents";
 
-function card(props) {
-  let data =JSON.parse(props.data);
+function Card(props) {
+  const [fakeData, setfakeData] = useState(true);
+  let SkeletonData = [
+    { Features: [], Amenities: [] },
+    { Features: [], Amenities: [] },
+    { Features: [], Amenities: [] },
+  ];
+  
+  useEffect(() => {
+    if(props.data){
+      setfakeData(false)
+    }
+  }, [props.data])
+  let Data = props.data || JSON.stringify(SkeletonData);
+  let data = JSON.parse(Data);
   return (
     <Page>
       {data.map((item, index) => (
-        <CardDiv key={index} image={item.Image}>
-          <CardImg className="img" src={item.Image} />
-          <CardAbout>
-            <Heading className="heading">{item.Heading}</Heading>
-            <SubHeading>{item.SubHeading}</SubHeading>
-            <Features>
-              {item.Features.map((item, index) => (
-                <p key={index}>{item} &nbsp;&nbsp;&nbsp;</p>
-              ))}
+        <CardDiv key={index} fakeData={fakeData} image={item.Image}>
+          <CardImg fakeData={fakeData} className="img" src={item.Image} />
+          <CardAbout fakeData={fakeData}>
+            <Heading fakeData={fakeData} className="heading">
+              {item.Heading}
+            </Heading>
+            <SubHeading wid={true} fakeData={fakeData}>{item.SubHeading}</SubHeading>
+            <Features
+              fakeData={fakeData}
+            >
+              {item.Features.map((item, index) => item + " ")}
             </Features>
 
-            <Amenities>
-              <SubHeading style={{ margin: "0rem" }}>Amenities</SubHeading>
-              <Features style={{ padding: "0rem" }}>
+            <Amenities >
+              <SubHeading fakeData={fakeData} wid={false}>Amenities</SubHeading>
+              <Features fakeData={fakeData} style={{ padding: "0rem" }}>
                 {item.Amenities.map((Aitem, Aindex) => (
-                  <Button key={Aindex} style={{ borderRadius: "2rem" }}>
+                  <Button
+                    fakeData={fakeData}
+                    key={Aindex}
+                    style={{ borderRadius: "2rem" }}
+                  >
                     {Aitem}
                   </Button>
                 ))}
               </Features>
             </Amenities>
-            <Price>
+            <Price fakeData={fakeData}>
               <Price style={{ flexDirection: "column" }}>
-                Price
-                <Fair>{item.Price}</Fair>
+                <Fair fakeData={fakeData}>{item.Price}</Fair>
               </Price>
-              <Amenities style={{flexDirection:"row"}}>
-              <Button
-                bgcolor="#f9a826"
-                style={{
-                  padding: "0.75rem 1.75rem",
-                  maxWidth: "20%",
-                  width: "auto",
-                  border: "none",
-                  color: "white",
-                }}
-              >
-                visit
-              </Button>
-              <Link
-                href={{
-                  pathname: "/RoomsDetail",
-                  query: {
-                    info: JSON.stringify(item),
-                  },
-                }}
-              >
+              <Amenities fakeData={fakeData} style={{ flexDirection: "row" }}>
                 <Button
+                  fakeData={fakeData}
+                  bgcolor="#f9a826"
+                  color="white"
                   style={{
                     padding: "0.75rem 1.75rem",
-                    width: "auto",
-                    border: "1px solid #f9a826",
-                    color: "#f9a826",
+                    maxWidth: "20%",
+                    border: "none",
                   }}
                 >
-                  ShowMore
+                  visit
                 </Button>
-              </Link>
+                <Link
+                  href={{
+                    pathname: "/RoomsDetail",
+                    query: {
+                      info: JSON.stringify(item),
+                    },
+                  }}
+                >
+                  <Button
+                    fakeData={fakeData}
+                    color="#f9a826"
+                    borderCol="#f9a826"
+                    style={{
+                      padding: "0.75rem 1.75rem",
+                      width: "auto",
+                    }}
+                  >
+                    ShowMore
+                  </Button>
+                </Link>
               </Amenities>
             </Price>
           </CardAbout>
@@ -88,4 +106,4 @@ function card(props) {
   );
 }
 
-export default card;
+export default Card;

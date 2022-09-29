@@ -18,6 +18,12 @@ export const FooterDiv = styled.div`
 export const FooterDataDiv = styled.div`
   display: flex;
   flex-direction: row;
+  @media (max-width:1285px){
+    display: ${props => (props.main ? "flex" : "none")};
+  }
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 export const FooterData = styled.div`
@@ -32,32 +38,39 @@ export const FooterData = styled.div`
   letter-spacing: 0.2rem;
   font-family: "Rum Raisin", sans-serif;
   margin: 1rem 6rem;
+  @media (max-width:1285px){
+    font-size: 1rem;
+    margin: 1rem 4rem;
+  }
+  @media (max-width: 900px) {
+    margin  : 1rem 2rem;
+  }
 `;
 function Footer() {
   return (
     <FooterDiv>
-      <FooterDataDiv>
+      <FooterDataDiv main={true}>
         <FooterData>Footer</FooterData>
-        {/* <FooterData>Hey</FooterData>
+        <FooterData>Hey</FooterData>
         <FooterData>Footer</FooterData>
         <FooterData>Footer</FooterData>
-        <FooterData>Footer</FooterData> */}
+        <FooterData>Footer</FooterData>
       </FooterDataDiv>
-      <FooterDataDiv>
-        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
-        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
-        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
-        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
-        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
-      </FooterDataDiv>
-      <FooterDataDiv>
+      <FooterDataDiv main={false}>
         <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
         <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
         <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
         <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
         <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
       </FooterDataDiv>
-      <FooterDataDiv>
+      <FooterDataDiv main={false}>
+        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
+        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
+        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
+        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
+        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
+      </FooterDataDiv>
+      <FooterDataDiv main={false}>
         <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
         <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
         <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>

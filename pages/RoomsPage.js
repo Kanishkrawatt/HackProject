@@ -9,18 +9,6 @@ const Page = styled.div`
   padding: 5rem 0rem;
   flex-direction: row;
 `;
-const Loading = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  font-size: 2rem;
-  font-weight: 600;
-  color: #f9a826;
-`;
-
-
 import Card from "../Components/Card/card";
 function RoomsPage() {
   const [data, setData] = React.useState([]);
@@ -39,7 +27,9 @@ function RoomsPage() {
   return (
     <>
       {loader ? (
-        <Loading>Loading...</Loading>
+        <Page>
+        <Card />
+        </Page>
       ) : (
         <Page>
           <Card data={data} />

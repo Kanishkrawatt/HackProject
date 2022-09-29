@@ -84,8 +84,12 @@ export const SideBannerdiv = styled(flexCenter)`
     margin: 1rem 1rem 1rem;
   }
 `;
-export const Title = styled.h1`
+export const Title = styled.div`
   font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   font-weight: 700;
   color: black;
   font-variant: small-caps;

@@ -29,13 +29,7 @@ function Nevbar() {
   }
   return (
     <>
-    <NevbarUl
-      style={
-        !navbar
-          ? { backgroundColor: "white" }
-          : { backgroundColor: "transparent" }
-      }
-    >
+    <NevbarUl>
       {NevbarContent.map((content, index) => {
         return (
           <Link href={content.Link} key={index}>

@@ -6,7 +6,7 @@ export const NevbarUl = styled.ul`
   width: 100vw;
   top: 0px;
   height: 4rem;
-  background-color: transparent;
+  background-color: white;
   padding-inline-start: 0;
   margin: 0px;
   justify-content: center;
@@ -73,15 +73,4 @@ export const HameBig = styled.div`
 export const Hamli = styled.li`
   margin-bottom: 5rem;
   margin-left: 45%;
-`;
-
-export const Logo = styled.div`
-  display: block;
-  height: 20px;
-  width: 20px;
-  color: white;
-  font-size: x-small;
-  border-radius: 50%;
-  background-color: black;
-  transform: translateX(8px);
 `;
