@@ -3,36 +3,40 @@ import axios from 'axios';
 
 
 function Admin() {
-  const [price, setPrice] = useState("");
-  const [image, setImage] = useState("");
-  const [content, setContent] = useState("");
-  const [heading, setHeading] = useState("");
-  const [subheading, setSubHeading] = useState("");
-  const [Features, setFeatures] = useState("");
-  const [Amenities, setAmenities] = useState("");
-
-  
+  const [data, setdata] = useState({  
+    price: "",
+    image: "",
+    content: "",
+    heading: "",
+    subheading: "",
+    Features: "",
+    Amenities: "",
+  });
 
   
     function submitfunc(e){
       e.preventDefault();
-      let data = {
-        "Heading": heading,
-        "SubHeading": subheading,
-        "Image": image,
-        "Features": Features.split(" "),
-        "Amenities": Amenities.split(" "),
-        "Price": price,
-        "Content": content,
+      let Data = {
+        "Heading": data.heading,
+        "SubHeading": data.subheading,
+        "Image": data.image,
+        "Features": data.Features.split(" "),
+        "Amenities": data.Amenities.split(" "),
+        "Price": data.price,
+        "Content": data.content,
       }
-      axios.post("/api/RoomData",data)      
-      setAmenities("");
-      setFeatures("");
-      setHeading("");
-      setSubHeading("");
-      setImage("");
-      setPrice("");
-      setContent("");
+      axios.post("/api/RoomData",Data);      
+      
+      setdata({
+        price: "",
+        image: "",
+        content: "",
+        heading: "",
+        subheading: "",
+        Features: "",
+        Amenities: "",
+      });
+
     }
     
     
@@ -45,13 +49,13 @@ function Admin() {
         <label className="block uppercase tracking-wide text-gray-700 text-xs mb-2" htmlFor="grid-first-name">
           PGName
         </label>
-        <input className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" value={heading} onChange={(e)=>setHeading(e.target.value)}/>
+        <input className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" value={data.heading} onChange={(e)=>setdata({...data,"heading":e.target.value})}/>
       </div>
       <div className="w-full px-3 md:w-1/2">
         <label className="block uppercase tracking-wide text-gray-700 text-xs  mb-2" htmlFor="grid-password">
           Address
         </label>
-        <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" value={subheading} onChange={(e)=>setSubHeading(e.target.value)} />
+        <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" value={data.subheading} onChange={(e)=>setdata({...data,"subheading":e.target.value})} />
       </div>
     </div>
     <div className="flex flex-wrap -mx-3 mb-6">
@@ -59,7 +63,7 @@ function Admin() {
         <label className="block uppercase tracking-wide text-gray-700 text-xs  mb-2" htmlFor="grid-password">
           About PG
         </label>
-        <textarea rows="3" className="no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500  resize-none"  type="text" value={content} onChange={(e)=>setContent(e.target.value)} />
+        <textarea rows="3" className="no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500  resize-none"  type="text" value={data.content} onChange={(e)=>setdata({...data,"content":e.target.value})} />
       </div>
     </div>
     <div className="flex flex-wrap -mx-3 mb-6">
@@ -67,7 +71,7 @@ function Admin() {
         <label className="block uppercase tracking-wide text-gray-700 text-xs  mb-2" htmlFor="grid-password">
           PG Img
         </label>
-        <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" value={image} onChange={(e)=>setImage(e.target.value)} />
+        <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" value={data.image} onChange={(e)=>setdata({...data,"image":e.target.value})} />
       </div>
     </div>
     <div className="flex flex-wrap -mx-3 mb-6">
@@ -75,7 +79,7 @@ function Admin() {
         <label className="block uppercase tracking-wide text-gray-700 text-xs  mb-2" htmlFor="grid-password">
           Price
         </label>
-        <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" value={price} onChange={(e)=>setPrice(e.target.value)} />
+        <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" value={data.price} onChange={(e)=>setdata({...data,"price":e.target.value})} />
       </div>
     </div>
     <div className="flex flex-wrap -mx-3 mb-6">
@@ -83,7 +87,7 @@ function Admin() {
         <label className="block uppercase tracking-wide text-gray-700 text-xs  mb-2" htmlFor="grid-password">
           Features
         </label>
-        <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" value={Features} onChange={(e)=>setFeatures(e.target.value)} />
+        <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" value={data.Features} onChange={(e)=>setdata({...data,"Features":e.target.value})} />
       </div>
     </div>
     <div className="flex flex-wrap -mx-3 mb-6">
@@ -91,7 +95,7 @@ function Admin() {
         <label className="block uppercase tracking-wide text-gray-700 text-xs  mb-2" htmlFor="grid-password">
           Amenities
         </label>
-        <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" value={Amenities} onChange={(e)=>setAmenities(e.target.value)} />
+        <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"  type="text" value={data.Amenities} onChange={(e)=>setdata({...data,"Amenities":e.target.value})} />
       </div>
     </div>
     <div className="md:flex md:items-center">

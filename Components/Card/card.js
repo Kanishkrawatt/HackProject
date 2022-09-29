@@ -64,7 +64,7 @@ function card(props) {
                 href={{
                   pathname: "/RoomsDetail",
                   query: {
-                    data: JSON.stringify(item),
+                    info: JSON.stringify(item),
                   },
                 }}
               >

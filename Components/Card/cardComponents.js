@@ -3,9 +3,11 @@ export const CardDiv = styled.div`
   display: flex;
   min-height: 35vh;
   height: auto;
-  min-width: 60vw;
+  min-width: 50vw;
   margin: 2rem;
   width: 80%;
+  justify-content: center;
+  align-items: center;
   transition: color 0.5s ease-in-out;
   padding: 2rem;
   border-bottom:2px solid #f9a826;
@@ -102,6 +104,8 @@ export const Page = styled.div`
   min-height: 100vh;
   align-items: center;
   padding-top: 5rem;
+  width:100vw;
+  flex-wrap: wrap;
   @media (max-width:886px){
     margin: 2rem;
   }
