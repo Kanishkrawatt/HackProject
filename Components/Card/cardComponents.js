@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const CardDiv = styled.div`
   display: flex;
-  height: 40vh;
+  height: 50vh;
   min-width: 50vw;
   margin: 2rem;
   width: 80%;
@@ -9,7 +9,9 @@ export const CardDiv = styled.div`
   align-items: center;
   transition: color 0.5s ease-in-out;
   padding: 2rem;
-  border-bottom: 2px solid ${(props) => props.fakeData?"#A9A9A9":"orange"};
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 2rem;
+  /* border-bottom: 2px solid ${(props) => props.fakeData?"#A9A9A9":"orange"}; */
   flex-direction: row;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -115,7 +117,6 @@ export const Page = styled.div`
   height: auto;
   min-height: 100vh;
   align-items: center;
-  padding-top: 5rem;
   width: 100vw;
   flex-wrap: wrap;
   @media (max-width: 886px) {

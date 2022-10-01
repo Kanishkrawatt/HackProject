@@ -79,10 +79,7 @@ function Card(props) {
                 </Button>
                 <Link
                   href={{
-                    pathname: "/RoomsDetail",
-                    query: {
-                      info: JSON.stringify(item),
-                    },
+                    pathname: `/RoomsDetail/${item.id}`,
                   }}
                 >
                   <Button

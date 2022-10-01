@@ -29,11 +29,11 @@ export const CreateInput = styled.input`
   justify-content: center;
   padding: 0 2rem;
   height: 7vh;
-  background-color:#E1FFB1;
+  background-color:lightgrey;
   width: 82vw;
   margin: 1rem;
   border-radius: 1rem;
-  border: 2px solid #C7F2A4;
+  border: 2px solid lightgrey;
   &:focus {
     outline: none;
   }
@@ -54,10 +54,10 @@ export const CreateButton = styled.button`
   justify-content: center;
   height: 10vh;
   width: 82vw;
-  background-color: #83BD75;
+  background-color: lightgrey;
   margin: 1rem;
   border-radius: 2rem;
-  border: 2px solid #B6E388;
+  border: 2px solid lightgrey;
   &:focus {
     outline: none;
   }
@@ -77,10 +77,10 @@ export const CreateTextArea = styled.textarea`
   padding: 2rem 2rem;
   height: 20vh;
   width: 82vw;
-  background-color:#E1FFB1;
+  background-color:lightgrey;
   margin: 1rem;
   border-radius: 2rem;
-  border: 2px solid #C7F2A4;
+  border: 2px solid lightgrey;
   &:focus {
     outline: none;
   }

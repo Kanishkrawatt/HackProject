@@ -8,8 +8,9 @@ function Nevbar() {
   let NevbarContent = [
     { Name: "Home", Link: "/" },
     { Name: "About", Link: "/about" },
-    { Name: "Create", Link: "/create" },
-    { Name: "Rooms", Link: "/RoomsPage" },
+    // { Name: "Create", Link: "/create" },
+    // { Name: "Rooms", Link: "/RoomsPage" },
+    // { Name: "Roomies", Link: "/RoomiesPage" },
   ];
   const [Ham, setHam] = useState(false);
   const toggleHeight = {
@@ -59,7 +60,6 @@ function Nevbar() {
         })}
       </HameBig>
     </NevbarUl>
-    {/* <Autherntication/> */}
     </>
   );
 }
