@@ -1,7 +1,5 @@
 import React from "react";
-import Link from "next/link";
 import styled from "styled-components";
-import Image from "next/image";
 
 const BlogFrameDiv = styled.div`
   display: flex;
@@ -100,7 +98,7 @@ const BlogDate = styled.p`
   padding: 0 2rem 0rem;
 `;
 
-function blogFrame(props) {
+function ProfileFrame(props) {
   let item = props.data;
   console.log(item);
   return (
@@ -111,9 +109,9 @@ function blogFrame(props) {
         {item.Name}
         <BlogDate>{"12 oct"}</BlogDate>
       </BlogTitle>
-      <StarRatings rating={item.rating} />
+      <StarRatings rating={"2"} />
     </BlogFrameDiv>
   );
 }
 
-export default blogFrame;
+export default ProfileFrame;

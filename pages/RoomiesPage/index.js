@@ -33,7 +33,7 @@ const RoomiesData= styled.div`
   margin-bottom: 2rem;
   `;
 
-function index(props) {
+function RoomiesPages(props) {
     const data = props.data;        
     return (
     <>
@@ -62,6 +62,6 @@ export async function getStaticProps() {
     };
   }
 
-export default index
+export default RoomiesPages
 
 
