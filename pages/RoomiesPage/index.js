@@ -34,9 +34,7 @@ const RoomiesData= styled.div`
   `;
 
 function index(props) {
-    const data = props.data;
-    console.log(data[0]);
-        
+    const data = props.data;        
     return (
     <>
         <Autherntication />
