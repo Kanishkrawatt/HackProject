@@ -17,16 +17,17 @@ const Page = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+  margin-top: 4rem;
 `;
 
 export const FilterBar = styled(InfoPanel)`
   margin: 0rem 2rem;
+  height: 8vh;
 `;
 
 export const FilterDropDownMenu = styled(Title)`
    background-color: white;
-   padding:1rem;
+   padding:0.75rem;
    flex-direction: row;
    border-radius: 2rem;
 `;
@@ -46,6 +47,8 @@ function RoomsPage({ data }) {
             <FilterDropDownMenu style={{ fontSize: "1rem" }}>Budget <Image src={"/downarrOW.png"} width={"30"} height={"30"} alt="log" /></FilterDropDownMenu>
             <FilterDropDownMenu style={{ fontSize: "1rem" }}>Occupation <Image src={"/downarrOW.png"} width={"30"} height={"30"} alt="log" /></FilterDropDownMenu>
             <FilterDropDownMenu style={{ fontSize: "1rem" }}>Gender <Image src={"/downarrOW.png"} width={"30"} height={"30"} alt="log" /></FilterDropDownMenu>
+            <FilterDropDownMenu style={{ fontSize: "1rem" }}>Amenities <Image src={"/downarrOW.png"} width={"30"} height={"30"} alt="log" /></FilterDropDownMenu>
+            | 
             <FilterDropDownMenu style={{ fontSize: "1rem" }}>Amenities <Image src={"/downarrOW.png"} width={"30"} height={"30"} alt="log" /></FilterDropDownMenu>
           </FilterBar>
           <Card data={JSON.stringify(data)} />

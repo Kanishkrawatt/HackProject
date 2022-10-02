@@ -152,6 +152,7 @@ export const DataBanner= styled(Banner)`
   width: 40%;
   background-size: cover;
   background-position: center;
+  flex-direction: column;
   &::selection{
     background-color: transparent;
   }

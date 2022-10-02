@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
 
@@ -38,7 +39,6 @@ const BlogImg = styled.img`
     opacity: 0.5;
     filter: blur(4px);
   }
-  
 `;
 const BlogTitle = styled.h1`
   font-size: 1.25rem;
@@ -100,15 +100,16 @@ const BlogDate = styled.p`
 
 function ProfileFrame(props) {
   let item = props.data;
-  console.log(item);
   return (
     <BlogFrameDiv>
       <BlogInfo>{item.content}</BlogInfo>
-      <BlogImg src={item.Image} alt={item.title} placeholder="blur"/>
-      <BlogTitle>
-        {item.Name}
-        <BlogDate>{"12 oct"}</BlogDate>
-      </BlogTitle>
+      <BlogImg src={item.Image} alt={item.title} placeholder="blur" />
+      <Link href={`/RoomiesDetail/${item.id}`}>
+        <BlogTitle>
+          {item.Name}
+          <BlogDate>{"12 oct"}</BlogDate>
+        </BlogTitle>
+      </Link>
       <StarRatings rating={"2"} />
     </BlogFrameDiv>
   );

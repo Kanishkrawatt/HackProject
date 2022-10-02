@@ -3,6 +3,7 @@ import db from "../db";
 import Image from "next/image";
 import Footer from "../Components/Footer";
 import Nevbar from "../Components/Nevbar/nevbar";
+import { SubHeading } from "../Components/Card/cardComponents";
 import {
   HomePage,
   BannerDiv,
@@ -23,48 +24,42 @@ function Home(props) {
   const [beds, setBeds] = useState(0);
   return (
     <section className="home">
-      <Nevbar />
       <HomePage>
         <BannerDiv>
-          <Banner style={{backgroundImage:"url(/MainImage.jpg)",backgroundSize:"cover"}}>
-            <HomeTitle>Hommies</HomeTitle>
+          <Banner
+            style={{
+              backgroundImage: "url(/MainImage.jpg)",
+              backgroundSize: "cover",
+            }}
+          >
+            <HomeTitle>Roomies</HomeTitle>
           </Banner>
           <SideBannerdiv>
             <Link href={"/ChoseOption"}>
-              <SideBanner>
-                <Title>
-                  Find{" "}
-                  <Image
-                    src={"/enter.png"}
-                    width={"30"}
-                    height={"30"}
-                    alt="log"
-                  />
-                </Title>
+              <SideBanner style={{ backgroundColor: "#ffd672" }}>
+                <Title>Find </Title>
+                <Image
+                  src={"/search.png"}
+                  width={"100"}
+                  height={"100"}
+                  alt="log"
+                />
               </SideBanner>
             </Link>
             <Link href={"/create"}>
-              <SideBanner>
-                <Title>
-                  Register{" "}
-                  <Image
-                    src={"/enter.png"}
-                    width={"30"}
-                    height={"30"}
-                    alt="log"
-                  />
-                </Title>
+              <SideBanner style={{ backgroundColor: "#ffd672" }}>
+                <Title>Register </Title>
                 <Image
-                    src={"/register.png"}
-                    width={"30"}
-                    height={"30"}
-                    alt="log"
-                  />
+                  src={"/register.png"}
+                  width={"100"}
+                  height={"100"}
+                  alt="log"
+                />
               </SideBanner>
             </Link>
           </SideBannerdiv>
         </BannerDiv>
-        <InfoPanel>
+        <InfoPanel style={{ backgroundColor: "#a5c7c9" }}>
           <Title style={{ fontSize: "1rem" }}>{city} City</Title>
           <Title style={{ fontSize: "1rem" }}>{pg} PG&apos;s</Title>
           <Title style={{ fontSize: "1rem" }}>{beds} Beds</Title>
@@ -77,33 +72,39 @@ function Home(props) {
           }}
         >
           <Title style={{ fontSize: "3rem", marginTop: "6rem" }}>
-            Top Cities
           </Title>
           <BannerDiv>
             <DataBanner>
               <Image src={"/1.png"} width={"550"} height={"550"} alt="img" />
             </DataBanner>
-            <DataBanner style={{fontSize:"2rem"}}>Start living your best life from day one</DataBanner>
-          </BannerDiv>
-          <BannerDiv style={{ marginTop: "6rem" }}>
-            <DataBanner style={{fontSize:"2rem"}}>
-              Don&quot;t come expecting &quot;hostel-PG food&quot;
-            </DataBanner>
-            <DataBanner>
-              <Image src={"/2.png"} width={"550"} height={"550"} alt="img" />
+            <DataBanner style={{ fontSize: "2rem" }}>
+              Start living your best life from day one
+              <SubHeading style={{fontSize:"1rem",color:"gray",marginTop:"2rem"}}>Bring a box full of hopes, dreams, ambitions… and of course, your personal belongings. Everything else - furniture, appliances, food - has already been taken care of.</SubHeading>
             </DataBanner>
           </BannerDiv>
           <BannerDiv style={{ marginTop: "6rem" }}>
+            <DataBanner style={{ fontSize: "2rem" }}>
+              Step into a room that has room for everything
+              <SubHeading style={{fontSize:"1rem",color:"gray",marginTop:"2rem"}}>Bring a box full of hopes, dreams, ambitions… and of course, your personal belongings. Everything else - furniture, appliances, food - has already been taken care of.</SubHeading>              
+            </DataBanner>
             <DataBanner>
               <Image src={"/3.png"} width={"550"} height={"550"} alt="img" />
             </DataBanner>
-            <DataBanner style={{fontSize:"2rem"}}>
-              Step into a room that has room for everything
+          </BannerDiv>
+          <BannerDiv style={{ marginTop: "6rem" }}>
+            <DataBanner>
+              <Image src={"/2.png"} width={"550"} height={"550"} alt="img" />
+            </DataBanner>
+            <DataBanner style={{ fontSize: "2rem" }}>
+              Don&quot;t come expecting &quot;hostel-PG food&quot;
+              <SubHeading style={{fontSize:"1rem",color:"gray",marginTop:"2rem"}}>Bring a box full of hopes, dreams, ambitions… and of course, your personal belongings. Everything else - furniture, appliances, food - has already been taken care of.</SubHeading>
+
             </DataBanner>
           </BannerDiv>
           <BannerDiv style={{ marginTop: "6rem" }}>
-            <DataBanner style={{fontSize:"2rem"}}>
+            <DataBanner style={{ fontSize: "2rem" }}>
               Take your daily list of chores. And tear it up
+              <SubHeading style={{fontSize:"1rem",color:"gray",marginTop:"2rem"}}>Bring a box full of hopes, dreams, ambitions… and of course, your personal belongings. Everything else - furniture, appliances, food - has already been taken care of.</SubHeading>
             </DataBanner>
             <DataBanner>
               <Image src={"/4.png"} width={"550"} height={"550"} alt="img" />
@@ -119,7 +120,7 @@ export async function getStaticProps(context) {
   let data = await db.collection("RoomsData").get();
   let Alldata = data.docs.map((entry) => entry.data());
   return {
-    props: { Alldata }, // will be passed to the page component as props
+    props: { Alldata },
     revalidate: 1,
   };
 }

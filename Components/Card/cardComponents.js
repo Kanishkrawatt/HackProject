@@ -4,14 +4,12 @@ export const CardDiv = styled.div`
   height: 50vh;
   min-width: 50vw;
   margin: 2rem;
-  width: 80%;
+  width: 90%;
   justify-content: center;
   align-items: center;
   transition: color 0.5s ease-in-out;
   padding: 2rem;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 2rem;
-  /* border-bottom: 2px solid ${(props) => props.fakeData?"#A9A9A9":"orange"}; */
   flex-direction: row;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;

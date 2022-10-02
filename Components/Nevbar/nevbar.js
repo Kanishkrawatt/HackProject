@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { NevbarUl, Nevbarli, HameBig, Hamli,Logo } from "./nevbarComponents";
 import styles from "../../styles/hamburgerNevbar.module.css";
+import Image from "next/image";
 // import Autherntication from "../autherntication";
 
 function Nevbar() {
   let NevbarContent = [
-    { Name: "Home", Link: "/" },
-    { Name: "About", Link: "/about" },
+    // { Name: "Home", Link: "/" },
+    // { Name: "About", Link: "/about" },
     // { Name: "Create", Link: "/create" },
     // { Name: "Rooms", Link: "/RoomsPage" },
     // { Name: "Roomies", Link: "/RoomiesPage" },
@@ -31,6 +32,7 @@ function Nevbar() {
   return (
     <>
     <NevbarUl>
+    <Link href={"/"}><Nevbarli style={{position:"absolute",transform:"translateY(-15px)",left:"2rem"}}><span style={{fontSize:"2rem"}}>R</span>oomies</Nevbarli></Link>
       {NevbarContent.map((content, index) => {
         return (
           <Link href={content.Link} key={index}>

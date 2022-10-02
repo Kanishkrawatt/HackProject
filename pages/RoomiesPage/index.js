@@ -4,6 +4,9 @@ import styled from 'styled-components'
 import Autherntication from '../../Components/Authentication';
 import db from '../../db';
 import ProfileFrame from '../../Components/ProfileFrame';
+import {FilterDropDownMenu,FilterBar} from '../RoomsPage';
+import Image from 'next/image';
+import Link from 'next/link';
 export const RoomiesPage = styled.div`
     display: flex;
     height: 100vh;

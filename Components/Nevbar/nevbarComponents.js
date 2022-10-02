@@ -21,7 +21,7 @@ export const Nevbarli = styled.li`
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   &:hover {
-    color: #f7f6dc;
+    color: grey;
   }
   &:active {
     color: darkgrey;
