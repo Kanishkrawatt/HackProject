@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import styled from "styled-components";
+import Autherntication from "../../Components/Authentication";
 
 export const CreateDiv = styled.div`
   display: flex;
@@ -120,7 +121,8 @@ function Admin() {
     });
   }
 
-  return (
+  return (<>
+    <Autherntication />
     <CreateDiv>
       <form onSubmit={submitfunc}>
         <InputDiv style={{ flexDirection: "row" }}>
@@ -191,6 +193,7 @@ function Admin() {
         <CreateButton type="submit" style={{fontWeight:"bold"}}>Submit</CreateButton>
       </form>
     </CreateDiv>
+    </>
   );
 }
 

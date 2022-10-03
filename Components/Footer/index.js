@@ -50,32 +50,29 @@ function Footer() {
   return (
     <FooterDiv>
       <FooterDataDiv main={true}>
+        <FooterData>Contact Us</FooterData>
+        {/* <FooterData>Hey</FooterData>
         <FooterData>Footer</FooterData>
-        <FooterData>Hey</FooterData>
         <FooterData>Footer</FooterData>
-        <FooterData>Footer</FooterData>
-        <FooterData>Footer</FooterData>
+        <FooterData>Footer</FooterData> */}
       </FooterDataDiv>
       <FooterDataDiv main={false}>
-        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
-        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
-        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
-        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
-        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
+        <FooterData style={{ fontSize: "1rem" }}>Kanishk</FooterData>
+        <FooterData style={{ fontSize: "1rem" }}>xyz.com</FooterData>
+        <FooterData style={{ fontSize: "1rem" }}>IG</FooterData>
+        <FooterData style={{ fontSize: "1rem" }}>Github</FooterData>
       </FooterDataDiv>
       <FooterDataDiv main={false}>
-        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
-        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
-        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
-        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
-        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
+        <FooterData style={{ fontSize: "1rem" }}>Pratham</FooterData>
+        <FooterData style={{ fontSize: "1rem" }}>abc.com</FooterData>
+        <FooterData style={{ fontSize: "1rem" }}>IG</FooterData>
+        <FooterData style={{ fontSize: "1rem" }}>Github</FooterData>
       </FooterDataDiv>
       <FooterDataDiv main={false}>
-        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
-        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
-        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
-        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
-        <FooterData style={{ fontSize: "1rem" }}>Footer</FooterData>
+        <FooterData style={{ fontSize: "1rem" }}>Rhythm</FooterData>
+        <FooterData style={{ fontSize: "1rem" }}>lmn.com</FooterData>
+        <FooterData style={{ fontSize: "1rem" }}>IG</FooterData>
+        <FooterData style={{ fontSize: "1rem" }}>Github</FooterData>
       </FooterDataDiv>
     </FooterDiv>
   );
