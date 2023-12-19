@@ -3,7 +3,7 @@ import styled from "styled-components";
 import axios from "axios";
 import { InfoPanel, Title } from "../Components/HomePage/HomepageComponents";
 import Card from "../Components/Card/card";
-import db from "../db";
+import db from "../db/index";
 import Image from "next/image";
 
 
@@ -43,13 +43,13 @@ function RoomsPage({ data }) {
       ) : (
         <Page>
           <FilterBar>
-            <FilterDropDownMenu style={{ fontSize: "1rem" }}>Location <Image src={"/downarrOW.png"} width={"30"} height={"30"} alt="log" /></FilterDropDownMenu>
-            <FilterDropDownMenu style={{ fontSize: "1rem" }}>Budget <Image src={"/downarrOW.png"} width={"30"} height={"30"} alt="log" /></FilterDropDownMenu>
-            <FilterDropDownMenu style={{ fontSize: "1rem" }}>Occupation <Image src={"/downarrOW.png"} width={"30"} height={"30"} alt="log" /></FilterDropDownMenu>
-            <FilterDropDownMenu style={{ fontSize: "1rem" }}>Gender <Image src={"/downarrOW.png"} width={"30"} height={"30"} alt="log" /></FilterDropDownMenu>
-            <FilterDropDownMenu style={{ fontSize: "1rem" }}>Amenities <Image src={"/downarrOW.png"} width={"30"} height={"30"} alt="log" /></FilterDropDownMenu>
+            <FilterDropDownMenu style={{ fontSize: "1rem" }}>Location <Image src={"/downarrow.png"} width={"30"} height={"30"} alt="log" /></FilterDropDownMenu>
+            <FilterDropDownMenu style={{ fontSize: "1rem" }}>Budget <Image src={"/downarrow.png"} width={"30"} height={"30"} alt="log" /></FilterDropDownMenu>
+            <FilterDropDownMenu style={{ fontSize: "1rem" }}>Occupation <Image src={"/downarrow.png"} width={"30"} height={"30"} alt="log" /></FilterDropDownMenu>
+            <FilterDropDownMenu style={{ fontSize: "1rem" }}>Gender <Image src={"/downarrow.png"} width={"30"} height={"30"} alt="log" /></FilterDropDownMenu>
+            <FilterDropDownMenu style={{ fontSize: "1rem" }}>Amenities <Image src={"/downarrow.png"} width={"30"} height={"30"} alt="log" /></FilterDropDownMenu>
             | 
-            <FilterDropDownMenu style={{ fontSize: "1rem" }}>Amenities <Image src={"/downarrOW.png"} width={"30"} height={"30"} alt="log" /></FilterDropDownMenu>
+            <FilterDropDownMenu style={{ fontSize: "1rem" }}>Amenities <Image src={"/downarrow.png"} width={"30"} height={"30"} alt="log" /></FilterDropDownMenu>
           </FilterBar>
           <Card data={JSON.stringify(data)} />
         </Page>

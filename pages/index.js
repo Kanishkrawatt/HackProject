@@ -1,5 +1,5 @@
 import { useState } from "react";
-import db from "../db";
+import db from "../db/index";
 import Image from "next/image";
 import Footer from "../Components/Footer";
 import Nevbar from "../Components/Nevbar/nevbar";
@@ -39,7 +39,7 @@ function Home(props) {
               <SideBanner style={{ backgroundColor: "#ffd672" }}>
                 <Title>Find </Title>
                 <Image
-                  src={"/search.png"}
+                  src={"/Search.png"}
                   width={"100"}
                   height={"100"}
                   alt="log"
@@ -59,7 +59,7 @@ function Home(props) {
             </Link>
           </SideBannerdiv>
         </BannerDiv>
-        <InfoPanel style={{ backgroundColor: "#a5c7c9" }}>
+        <InfoPanel style={{ backgroundColor: "#9ADE7B" }}>
           <Title style={{ fontSize: "1rem" }}>{city} City</Title>
           <Title style={{ fontSize: "1rem" }}>{pg} PG&apos;s</Title>
           <Title style={{ fontSize: "1rem" }}>{beds} Beds</Title>

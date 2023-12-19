@@ -77,7 +77,7 @@ function RoomsDetail(props) {
         {data.Name}
       </Heading>
       <FirstHalf>
-        <CardImg style={{ width: "50vw", height: "50vh" }} src={data.Image} />
+        <CardImg style={{ width: "50vw", height: "5=9ivh" }} src={data.Image} />
         <SecondHalf>
           <SubHeading color="black">{data.content}</SubHeading>
           <FirstHalf>
